@@ -6,10 +6,9 @@
 {% endblock %}
 
 {% block content %}
-
-{% include 'guess/instructions.html' %}
 {% formfield group.accept with label=offer_text %}
-<p></p>
+{% include 'ultimatum/instructions.html' %}
+<br>
 
 {% next_button %}
 

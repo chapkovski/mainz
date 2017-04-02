@@ -7,9 +7,10 @@
 
 {% block content %}
 
-{% include 'guess/instructions.html' %}
+
 {% formfield group.offer %}
-<p></p>
+{% include 'ultimatum/instructions.html' %}
+<br>
 
 {% next_button %}
 

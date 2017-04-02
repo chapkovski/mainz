@@ -8,7 +8,7 @@
 {% block content %}
 <table class="table table-striped table-hover">
   <tr>
-      <td>Your role in this round was:</td>
+      <td>Your role was:</td>
       <td>{{player.role}}</td>
   </tr>
   {% if player.role == "Proposer" %}
@@ -31,7 +31,7 @@
   </tr>
   {% endif %}
   <tr>
-      <td>Your final payoff in this round:</td>
+      <td>Your final payoff:</td>
 
       <td>{{player.payoff}}</td>
 

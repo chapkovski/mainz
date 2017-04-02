@@ -26,7 +26,9 @@ class Group(BaseGroup):
     offer = models.FloatField(min=0,
                               max=Constants.endowment,
                               widget=\
-                              widgets.SliderInput(attrs={'step': '0.1'}))
+                              widgets.SliderInput(attrs={'step': '0.1'}),
+                              verbose_name="You are Proposer. Please, \
+                              make your offer")
     accept = models.BooleanField(choices=[(False,'Reject'),(True,'Accept')],
                                 widget=widgets.RadioSelectHorizontal())
 

@@ -1,7 +1,8 @@
-
+{% load staticfiles  %}
 <div class=" well well-lg">
-<p>You have an endowment of {{Constants.endowment}} points.</p>
-<p>The computer will generate a number from {{Constants.minguess}} to {{Constants.maxguess}}.</p>
-<p>You have to guess this number.</p>
-<p>The closer is your guess the more you will earn.</p>
+<p>There are two players in this game: Proposer and Responder.</p>
+<p>The Proposer can offer from 0 to {{Constants.endowment}} to the Responder.</p>
+<p>The responder can accept or reject this offer.</p>
+<p>If the Responder rejects, both players get 0.</p>
+<img src="{% static "ultimatum/ultimatum.png" %}"/>
 </div>
