@@ -2,13 +2,13 @@
 {% load staticfiles otree_tags %}
 
 {% block title %}
-    Make your guess
+    Make your offer
 {% endblock %}
 
 {% block content %}
 
 {% include 'guess/instructions.html' %}
-{% formfield player.guess %}
+{% formfield group.offer %}
 <p></p>
 
 {% next_button %}

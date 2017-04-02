@@ -39,5 +39,7 @@ class Player(BasePlayer):
                                  {}".format(Constants.minguess,
                                             Constants.maxguess,),
                                 doc='guess of the player')
+    diff = models.IntegerField()
     def set_payoff(self):
-        self.payoff = Constants.endowment - abs(self.guess - self.toguess)
+        self.diff = abs(self.guess - self.toguess)
+        self.payoff = Constants.endowment - self.diff

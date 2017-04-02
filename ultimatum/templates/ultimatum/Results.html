@@ -2,12 +2,41 @@
 {% load staticfiles otree_tags %}
 
 {% block title %}
-    Page title
+    Results
 {% endblock %}
 
 {% block content %}
+<table class="table table-striped table-hover">
+  <tr>
+      <td>Your role in this round was:</td>
+      <td>{{player.role}}</td>
+  </tr>
+  {% if player.role == "Proposer" %}
+  <tr>
+      <td>You offered:</td>
+      <td>{{group.offer}}</td>
+  </tr>
+  <tr>
+      <td>Responder's decision:</td>
+      <td>{{accept}}</td>
+  </tr>
+  {% else %}
+  <tr>
+      <td>Proposer offered to you:</td>
+      <td>{{group.offer}}</td>
+  </tr>
+  <tr>
+      <td>Your decision:</td>
+      <td>{{accept}}</td>
+  </tr>
+  {% endif %}
+  <tr>
+      <td>Your final payoff in this round:</td>
 
-    {% next_button %}
+      <td>{{player.payoff}}</td>
+
+  </tr>
+</table>
+{% next_button %}
+
 {% endblock %}
-
-
