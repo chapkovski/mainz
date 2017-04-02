@@ -6,7 +6,7 @@ from boto.mturk import qualification
 
 import otree.settings
 
-
+CHANNEL_ROUTING = 'miniebay.routing.channel_routing'
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # the environment variable OTREE_PRODUCTION controls whether Django runs in
@@ -112,7 +112,33 @@ SESSION_CONFIGS = [
         'display_name': 'Guess game',
         'num_demo_participants': 1,
         'app_sequence': ['guess'],
-    }
+    },
+    {
+        'name': 'ultimatum',
+        'display_name': 'Ultimatum',
+        'num_demo_participants': 2,
+        'app_sequence': ['ultimatum'],
+    },
+    {
+        'name': 'pgg',
+        'display_name': 'Standard Public good game',
+        'num_demo_participants': 3,
+        'app_sequence': ['pggfg'],
+        'punishment': False,
+    },
+    {
+        'name': 'pggfg',
+        'display_name': 'Public good game with punishment',
+        'num_demo_participants': 3,
+        'app_sequence': ['pggfg'],
+        'punishment': True,
+    },
+    {
+        'name': 'miniebay',
+        'display_name': 'mini Ebay',
+        'num_demo_participants': 3,
+        'app_sequence': ['miniebay'],
+    },
 ]
 
 # anything you put after the below line will override

@@ -15,6 +15,9 @@ class Constants(BaseConstants):
     name_in_url = 'guess'
     players_per_group = None
     num_rounds = 1
+    minguess = 0
+    maxguess = 100
+    endowment = 100
 
 
 class Subsession(BaseSubsession):
@@ -26,4 +29,15 @@ class Group(BaseGroup):
 
 
 class Player(BasePlayer):
-    pass
+    toguess = models.IntegerField(min=Constants.minguess,
+                                  max=Constants.maxguess,
+                                  doc='random number for a player to guess')
+    guess = models.IntegerField(min=Constants.minguess,
+                                max=Constants.maxguess,
+                                verbose_name="Please, insert \
+                                any number from {} to \
+                                 {}".format(Constants.minguess,
+                                            Constants.maxguess,),
+                                doc='guess of the player')
+    def set_payoff(self):
+        self.payoff = Constants.endowment - abs(self.guess - self.toguess)

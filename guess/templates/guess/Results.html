@@ -2,12 +2,13 @@
 {% load staticfiles otree_tags %}
 
 {% block title %}
-    Page title
+    Results
 {% endblock %}
 
 {% block content %}
-
+<p>The number that computer generated was: <b>{{player.toguess}}</b></p>
+<p>Your guess was: <b>{{player.guess}}</b></p>
+<p>The difference is: <b>{{diff}}</b></p>
+<p>Your final earning is: <b>{{player.payoff}}</b></p>
     {% next_button %}
 {% endblock %}
-
-
