@@ -11,7 +11,7 @@ class Intro(Page):
 class Offer(Page):
     form_model = models.Group
     form_fields = ['offer']
-    
+
     def is_displayed(self):
         return self.player.role() == 'Proposer'
 
@@ -23,6 +23,8 @@ class OfferWaitPage(WaitPage):
     title_text = "You are Responder"
     body_text = "Please wait while the Proposer decides how many tokens he \
     or she will offer to you..."
+    def is_displayed(self):
+        return self.player.role() == 'Responder'
 
 
 class Accept(Page):
