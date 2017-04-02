@@ -11,7 +11,7 @@ class Intro(Page):
 class Offer(Page):
     form_model = models.Group
     form_fields = ['offer']
-    # timeout_seconds = 6000
+    
     def is_displayed(self):
         return self.player.role() == 'Proposer'
 
