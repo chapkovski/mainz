@@ -1,0 +1,29 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree_tags %}
+
+
+{% block content %}
+
+      {% include 'pggfg/punishmentinstructions.html' %}
+  <table class="table table-hover table-striped table-responsive table-bordered">
+    <tr>
+        <tr>
+          <td><b>Contribution:</b></td>
+          {% for other in player.get_others_in_group %}
+            <td>{{other.contribution}}</td>
+          {% endfor %}
+        </tr>
+        <tr>
+            <td><b>Send punishment tokens:</b></td>
+          {% for field in form %}
+            <td>{% formfield field %}</td>
+          {% endfor %}
+        </tr>
+</table>
+
+
+
+
+    {% next_button %}
+
+{% endblock %}

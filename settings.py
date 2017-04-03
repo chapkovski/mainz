@@ -140,6 +140,12 @@ SESSION_CONFIGS = [
         'num_demo_participants': 3,
         'app_sequence': ['miniebay'],
     },
+    {
+        'name': 'simplepgg',
+        'display_name': 'simple PGG',
+        'num_demo_participants': 3,
+        'app_sequence': ['simplepgg'],
+    },
 ]
 
 # anything you put after the below line will override

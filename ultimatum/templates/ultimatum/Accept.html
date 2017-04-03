@@ -6,10 +6,8 @@
 {% endblock %}
 
 {% block content %}
-{% formfield group.accept with label=offer_text %}
-{% include 'ultimatum/instructions.html' %}
-<br>
-
-{% next_button %}
-
+  {% formfield group.accept with label=offer_text %}
+  {% include 'ultimatum/instructions.html' %}
+  <br>
+  {% next_button %}
 {% endblock %}
