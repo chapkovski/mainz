@@ -63,7 +63,7 @@ POINTS_DECIMAL_PLACES = 2
 LANGUAGE_CODE = 'en'
 
 # if an app is included in SESSION_CONFIGS, you don't need to list it here
-INSTALLED_APPS = ['otree']
+INSTALLED_APPS = ['otree',  'radiogrid',]
 
 # SENTRY_DSN = ''
 
@@ -145,6 +145,12 @@ SESSION_CONFIGS = [
         'display_name': 'simple PGG',
         'num_demo_participants': 3,
         'app_sequence': ['simplepgg'],
+    },
+    {
+        'name': 'bigfive',
+        'display_name': 'mini big Five',
+        'num_demo_participants': 1,
+        'app_sequence': ['bigfive'],
     },
 ]
 
