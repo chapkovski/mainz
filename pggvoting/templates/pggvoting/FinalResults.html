@@ -1,0 +1,15 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree_tags %}
+{% block title %} Final Results {% endblock %}
+
+{% block content %}
+
+  {% for i in player.in_all_rounds %}
+    <p>Your payoff in round
+      {forloop.counter}}:<b>{{i.payoff}}</b></p>
+    {% endfor %}
+
+  <p>Your final payoff: {{player.participant.payoff}}</p>
+
+  {% next_button %}
+{% endblock %}

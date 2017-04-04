@@ -141,10 +141,17 @@ SESSION_CONFIGS = [
         'app_sequence': ['miniebay'],
     },
     {
-        'name': 'simplepgg',
-        'display_name': 'simple PGG',
+        'name': 'simplepgg_partner',
+        'display_name': 'simple PGG - partner matching',
         'num_demo_participants': 3,
         'app_sequence': ['simplepgg'],
+    },
+    {
+        'name': 'simplepgg_random',
+        'display_name': 'simple PGG - random matching',
+        'num_demo_participants': 3,
+        'app_sequence': ['simplepgg'],
+        'random': True,
     },
     {
         'name': 'bigfive',
@@ -152,6 +159,12 @@ SESSION_CONFIGS = [
         'num_demo_participants': 1,
         'app_sequence': ['bigfive'],
     },
+    # {
+    #     'name': 'pggvoting',
+    #     'display_name': 'PGG with voting',
+    #     'num_demo_participants': 3,
+    #     'app_sequence': ['pggvoting'],
+    # },
 ]
 
 # anything you put after the below line will override

@@ -5,6 +5,18 @@ from otree.api import Currency as c, currency_range
 from .models import Constants
 
 
+class Demographics(Page):
+    form_model = models.Player
+    form_fields = ['age',
+                   'gender']
+
+    def is_displayed(self):
+        return self.subsession.round_number == 1
+
+    def before_next_page(self):
+        self.player.participant.vars['gender'] = self.player.gender
+
+
 class Contribute(Page):
     """Player: Choose how much to contribute"""
 
@@ -30,6 +42,7 @@ class FinalResults(Page):
 
 
 page_sequence = [
+    Demographics,
     # Introduction,
     Contribute,
     ResultsWaitPage,

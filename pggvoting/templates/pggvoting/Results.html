@@ -1,0 +1,21 @@
+{% extends "global/Base.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Results  (Period {{ subsession.round_number }} of {{ Constants.num_rounds }})
+{% endblock %}
+
+{% block content %}
+      {% for i in player.in_previous_rounds %}
+          <p>Your payoff in round {{forloop.counter}}: <b>{{i.payoff}}</b></p>
+      {% endfor %}
+      Your payoff in this round: {{player.payoff}}
+      <hr>
+      <h4>Other participants:</h4>
+      {% for i in player.get_others_in_group %}
+        <p>Participant {{id_in_group}} 
+          contributed {{i.contribution}}.
+        </p>
+      {% endfor %}
+      {% next_button %}
+{% endblock %}

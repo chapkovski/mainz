@@ -41,11 +41,7 @@ class Subsession(BaseSubsession):
             self.punishment = False
 
 
-
-
 class Group(BaseGroup):
-    # myjson = JSONField(null=True, doc="""json for saving punishment matrix.
-
     total_contribution = models.IntegerField()
     average_contribution = models.FloatField()
     individual_share = models.CurrencyField()

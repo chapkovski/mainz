@@ -43,7 +43,7 @@ class Punishment(Page):
         fields_to_show = self.punishment_fields()
         return fields_to_show
 
-    """Participants take decision whether to detect the smallest contributor"""
+
     def before_next_page(self):
         form_data = self.form.data
         for f in self.punishment_fields():

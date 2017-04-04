@@ -3,7 +3,7 @@ from otree.api import (
     Currency as c, currency_range
 )
 from radiogrid import RadioGridField
-
+import csv
 author = 'Your name here'
 
 doc = """
@@ -15,6 +15,14 @@ class Constants(BaseConstants):
     name_in_url = 'bigfive'
     players_per_group = None
     num_rounds = 1
+    # with open('bigfive/big5q.csv') as f:
+    #     questions =  f.readlines()
+    # questions = [(i, x.strip()) for i, x in enumerate(questions)]
+    #
+    # with open('bigfive/big5a.csv') as f:
+    #     answers =  f.readlines()
+    # answers = [(i, x.strip()) for i, x in enumerate(answers)]
+
 
 
 class Subsession(BaseSubsession):
@@ -26,7 +34,7 @@ class Group(BaseGroup):
 
 
 
-ROWS = (
+ROWS = [
     (1, "Extraverted, enthusiastic"),
     (2, "Critical, quarrelsome"),
     (3, "Dependable, self-disciplined"),
@@ -37,7 +45,7 @@ ROWS = (
     (8, 'Disorganized, careless'),
     (9, 'Calm, emotionally stable'),
     (10, 'Conventional, uncreative'),
-)
+]
 
 VALUES = (
     (1, "Disagree strongly"),
@@ -57,6 +65,8 @@ AGE_CHOICES =(
     (5, "51-60"),
     (6, ">60"),
 )
+
+
 class Player(BasePlayer):
     age = models.PositiveIntegerField(verbose_name='What is your age?',
                                         choices=AGE_CHOICES,
@@ -68,3 +78,5 @@ class Player(BasePlayer):
                                 widget=widgets.RadioSelect())
     bigfive = RadioGridField(rows=ROWS, values=VALUES, require_all_fields=True,
     verbose_name='I see myself as',)
+    # bigfive = RadioGridField(rows=Constants.questions, values=Constants.answers, require_all_fields=True,
+    # verbose_name='I see myself as',)

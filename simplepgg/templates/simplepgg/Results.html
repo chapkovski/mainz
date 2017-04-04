@@ -6,6 +6,21 @@
 {% endblock %}
 
 {% block content %}
+      {% for i in player.in_previous_rounds %}
+          <p>Your payoff in round {{forloop.counter}}: <b>{{i.payoff}}</b></p>
+      {% endfor %}
       Your payoff in this round: {{player.payoff}}
+      <hr>
+      <h4>Other participants:</h4>
+      {% for i in player.get_others_in_group %}
+        <p>Participant {{id_in_group}}:
+          {% if i.participant.vars.gender == "Female" %}
+            She
+          {% else %}
+            He
+          {% endif %}
+          contributed {{i.contribution}}.
+        </p>
+      {% endfor %}
       {% next_button %}
 {% endblock %}

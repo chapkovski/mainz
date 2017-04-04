@@ -7,4 +7,3 @@ staticfiles
 *.sqlite3
 _coverage_results/
 _static_root
-presentation/

@@ -1,0 +1,16 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+      Contribution (Period {{ subsession.round_number }} of {{ Constants.num_rounds }})
+{% endblock %}
+
+{% block content %}
+  
+    {% formfield player.contribution %}
+
+    {% next_button %}
+
+
+
+{% endblock %}
