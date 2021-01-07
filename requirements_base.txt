@@ -42,7 +42,7 @@ incremental==16.10.1
 IPy==0.83
 Jinja2==2.9.5
 jmespath==0.9.1
-lxml==3.7.3
+lxml==4.6.2
 MarkupSafe==1.0
 memoized-property==1.0.2
 mendeley==0.3.2
