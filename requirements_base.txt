@@ -40,7 +40,7 @@ huey==1.2.0
 imagesize==0.7.1
 incremental==16.10.1
 IPy==0.83
-Jinja2==2.9.5
+Jinja2==2.11.3
 jmespath==0.9.1
 lxml==3.7.3
 MarkupSafe==1.0
