@@ -4,7 +4,7 @@ arrow==0.5.0
 asgi-redis==0.14.1
 asgiref==0.14.0
 attrs==16.3.0
-autobahn==0.16.0
+autobahn==20.12.3
 Automat==0.5.0
 awscli==1.11.56
 Babel==2.3.4
