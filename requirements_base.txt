@@ -62,7 +62,7 @@ pytest==2.9.2
 pytest-django==3.0.0
 python-dateutil==2.6.0
 python-decouple==2.3
-python-docx==0.8.5
+python-docx==0.8.6
 python-redis-lock==3.2.0
 pytz==2016.6.1
 PyYAML==3.12
